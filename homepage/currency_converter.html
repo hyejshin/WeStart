@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Currency Converter</title>
+
+  <style type="text/css">
+	body{background-image: url("PinkFlower.jpg"); font-weight: bold; text-align: center;}
+	h1{text-shadow: 4px 4px 5px white; text-align: center; font-family: "AR JULIAN";}
+  </style>
+
+ </head>
+ <body>
+	<h1> Currency Converter♪ </h1>
+	<hr><br>
+	
+	USD($)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="usd" type="text" size="10" onkeyup="update(1);"/><br>
+	GBP(£):&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="gbp" type="text" size="10" onkeyup="update(2);"/><br>
+	CAD(C$):&nbsp<input id="cad" type="text" size="10" onkeyup="update(3);"/><br>
+	EUR(€):&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="eur" type="text" size="10" onkeyup="update(4);"/><br>
+	KOR(₩):&nbsp&nbsp&nbsp<input id="kor" type="text" size="10" onkeyup="update(5);"/><br>
+	JPY(￥):&nbsp&nbsp&nbsp&nbsp&nbsp<input id="jpy" type="text" size="10" onkeyup="update(6);"/><br>
+	CNY(元):&nbsp&nbsp&nbsp&nbsp<input id="cny" type="text" size="10" onkeyup="update(7);"/><br>
+	
+	<script type="text/javascript">
+	function update(type){
+		switch(type){
+			case 1:
+				var money = document.getElementById("usd").value;
+				var usd=1; break;
+			case 2:
+				var money = document.getElementById("gbp").value;
+				var usd=1.7087; break;
+			case 3:
+				var money = document.getElementById("cad").value;
+				var usd=0.9315; break;
+			case 4:
+				var money = document.getElementById("eur").value;
+				var usd=1.3525; break;
+			case 5:
+				var money = document.getElementById("kor").value;
+				var usd=0.000970788; break;
+			case 6:
+				var money = document.getElementById("jpy").value;
+				var usd=0.009867285; break;
+			case 7:
+				var money = document.getElementById("cny").value;
+				var usd=0.161082474; break;
+		}
+		if(type!=1)
+			document.getElementById("usd").value=(money*usd*1).toFixed(4);
+		if(type!=2)
+			document.getElementById("gbp").value=(money*usd*0.5853).toFixed(4);
+		if(type!=3)
+			document.getElementById("cad").value=(money*usd*1.0735).toFixed(4);
+		if(type!=4)
+			document.getElementById("eur").value=(money*usd*0.7395).toFixed(4);
+		if(type!=5)
+			document.getElementById("kor").value=(money*usd*1030.09).toFixed(4);
+		if(type!=6)
+			document.getElementById("jpy").value=(money*usd*101.345).toFixed(4);
+		if(type!=7)
+			document.getElementById("cny").value=(money*usd*6.208).toFixed(4);
+	}
+	</script>
+
+	<br>
+	<a href="http://finance.yahoo.com/currency-converter/#from=USD;to=GBP;amt=1" title="화폐 변환 사이트">
+	<img src="money.jpg" width="500px"></a>
+ </body>
+</html>

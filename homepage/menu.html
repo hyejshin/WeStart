@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Menu</title>
+
+  <base target="content">
+
+  <style type="text/css">
+	body{background-color:#95DCFF; font-size: 20pt; font-family: "LilyUPC", "Showcard Gothic", "Script MT Bold", "AR DELANEY"}
+	li{list-style-image: url("heart1.jpg"); color:black}
+	a{color: black;}
+	a:visited{color: #FF6673; text-shadow: 3px 3px 4px white;}
+	#date{font-family: "굵은안상수체"; font-size: 17pt;}
+  </style>
+
+ </head>
+ <body><br>
+  <ul>
+	<li><a href="profile.html">Profile</a></li>
+	<li><a href="personality.html">Personality</a></li>
+	<li><a href="hobby.html">Hobby</a></li>
+	<li><a href="bucket_list.html">Bucket List</a></li>
+	<li><a href="time_table.html">Time Table</a></li>
+	<li><a href="currency_converter.html"><span style="font-size: 17pt">Currency Converter</span></a></li>
+  </ul>
+
+	<br><br><br><br><br><br>
+	<div id="date">
+	<script type="text/javascript">
+		var today = new Date();
+		var year = today.getFullYear();
+		var month = today.getMonth()+1;
+		var date = today.getDate();
+		var day = today.getDay();
+		var week = new Array('일', '월', '화', '수', '목', '금', '토');
+
+		document.write(year+"/"+month+"/"+date+" ("+week[day]+")");
+	</script>
+	</div>
+	
+	<audio autoplay src="눈코입_태양.mp3"></audio>
+ </body>
+</html>
